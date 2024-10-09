@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #24C4B5;
+    color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #1aa99f;
+}
+
+main {
+    padding: 20px;
+}
+
+.welcome-section {
+    background: #fff;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#services {
+    padding: 20px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    color: #24C4B5;
+    margin-bottom: 10px;
+}
+
+.service-card a.button {
+    display: inline-block;
+    background: #24C4B5;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.service-card a.button:hover {
+    background: #1aa99f;
+}
+
+#news {
+    padding: 20px;
+}
+
+.news-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-item h3 {
+    color: #24C4B5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #24C4B5;
+    color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#login {
+    background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+#login h2 {
+    text-align: center;
+    color: #24C4B5;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #24C4B5;
+}
+
+button {
+    background: #24C4B5;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #1aa99f;
+    transform: scale(1.05);
+}
+
+#register {
+    background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+#register h2 {
+    text-align: center;
+    color: #24C4B5;
+    margin-bottom: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    color: #24C4B5;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #f1f1f1;
+    color: #24C4B5;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#home {
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+#home h1 {
+    text-align: center;
+    color: #24C4B5;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        display: inline-block;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-content {
+        margin-left: 0;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        text-align: center;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .welcome-section,
+    .service-card,
+    .news-item {
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    #home h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 10px 5px;
+    }
+
+    .service-card {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
