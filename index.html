@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Home - Wonosobo Connect</title>
 </head>
 <body>
@@ -15,7 +15,8 @@
             </p>            
         </div>
         <nav>
-            <ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Ikon Hamburger -->
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="layanan.html">Layanan</a></li>
                 <li><a href="berita.html">Berita</a></li>
@@ -23,7 +24,7 @@
                 <li><a href="login.html">Login/Register</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
             </ul>
-        </nav>
+        </nav>      
     </header>
     
     <main>
@@ -34,22 +35,25 @@
      
         <section id="services">
             <h2>Layanan Kami</h2>
-            <div class="service-card">
-                <h3>Pelayanan Administrasi Kependudukan</h3>
-                <p>Dapatkan informasi dan layanan terkait administrasi kependudukan secara online.</p>
-                <a href="layanan.html" class="button">Selengkapnya</a>
-            </div>
-            <div class="service-card">
-                <h3>Informasi Kesehatan</h3>
-                <p>Temukan informasi terbaru mengenai layanan kesehatan di Wonosobo.</p>
-                <a href="layanan.html" class="button">Selengkapnya</a>
-            </div>
-            <div class="service-card">
-                <h3>Layanan Izin Usaha</h3>
-                <p>Dapatkan izin usaha dengan mudah dan cepat melalui platform ini.</p>
-                <a href="layanan.html" class="button">Selengkapnya</a>
-            </div>
-        </section>
+            <button id="toggle-services" class="button">Tampilkan Layanan</button>
+            <div id="services-list">
+                <div class="service-card">
+                        <h3>Pelayanan Administrasi Kependudukan</h3>
+                        <p>Dapatkan informasi dan layanan terkait administrasi kependudukan secara online.</p>
+                        <a href="layanan.html" class="button">Selengkapnya</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Informasi Kesehatan</h3>
+                        <p>Temukan informasi terbaru mengenai layanan kesehatan di Wonosobo.</p>
+                        <a href="layanan.html" class="button">Selengkapnya</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Layanan Izin Usaha</h3>
+                        <p>Dapatkan izin usaha dengan mudah dan cepat melalui platform ini.</p>
+                        <a href="layanan.html" class="button">Selengkapnya</a>
+                    </div>
+                </div>
+            </section>            
 
         <section id="news">
             <h2>Berita Terbaru</h2>
@@ -65,7 +69,8 @@
             </article>
         </section>
     </main>
-
+    <div id="toast" class="toast">Pesan Toast di sini</div>
+    <script src="js/script.js"></script>
     <footer>
         <p>© 2024 Wonosobo Connect. Semua Hak Cipta Dilindungi.</p>
         <p>Kebijakan Privasi | Syarat dan Ketentuan</p>

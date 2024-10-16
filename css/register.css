@@ -1,0 +1,173 @@
+/* index.css */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #24C4B5;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Tambahkan ini agar hamburger dapat ditampilkan di atas header */
+}
+
+.logo {
+    text-align: left;
+}
+
+.wonosobo-connect {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.text-wonosobo {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.text-connect {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Flex untuk menu di layar besar */
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #112423;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #24C4B5;
+}
+main {
+    padding: 20px; /* Padding untuk main */
+    display: flex; /* Menggunakan flexbox untuk layout */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    height: calc(100vh - 140px); /* Mengatur tinggi main agar sesuai dengan viewport */
+}
+
+#register {
+    background: white; /* Latar belakang untuk section register */
+    padding: 40px; /* Padding untuk form register lebih lebar */
+    border-radius: 10px; /* Sudut melengkung untuk kotak register */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk menambah kedalaman */
+    width: 100%; /* Lebar penuh */
+    max-width: 500px; /* Lebar maksimum yang lebih lebar */
+}
+
+h2 {
+    color: #24C4B5; /* Warna judul */
+    margin-bottom: 30px; /* Jarak bawah judul yang lebih besar */
+    text-align: center; /* Memusatkan judul */
+}
+
+label {
+    display: block; /* Mengatur label agar tampil sebagai block */
+    margin-bottom: 8px; /* Jarak bawah label */
+    font-weight: bold; /* Menebalkan teks label */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 95%; /* Lebar input penuh */
+    padding: 15px; /* Padding di dalam input lebih lebar */
+    margin-bottom: 20px; /* Jarak bawah input lebih besar */
+    border: 1px solid #ccc; /* Border untuk input */
+    border-radius: 5px; /* Sudut melengkung untuk input */
+    transition: border-color 0.3s; /* Transisi saat border berubah */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #24C4B5; /* Warna border saat fokus */
+}
+
+button {
+    width: 100%; /* Lebar tombol penuh */
+    padding: 15px; /* Padding di dalam tombol lebih lebar */
+    background-color: #24C4B5; /* Warna latar belakang tombol */
+    color: white; /* Warna teks untuk tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Sudut melengkung untuk tombol */
+    cursor: pointer; /* Pointer saat hover di tombol */
+    font-weight: bold; /* Ketebalan font untuk teks tombol */
+    transition: background 0.3s, transform 0.2s; /* Transisi saat warna tombol berubah */
+}
+
+button:hover {
+    background-color: #1aa99f; /* Warna tombol saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Warna hijau */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(212, 204, 204, 0.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0; /* Sembunyikan secara default */
+    transform: translateY(20px); /* Bergerak ke bawah */
+    z-index: 1000; /* Agar berada di atas elemen lain */
+}
+
+.toast.show {
+    opacity: 1; /* Tampilkan toast */
+    transform: translateY(0); /* Kembalikan ke posisi awal */
+}
+
+.toast.fade {
+    opacity: 0; /* Hilangkan secara perlahan */
+    transform: translateY(20px); /* Bergerak ke bawah */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Menyusun link secara vertikal pada layar kecil */
+    }
+    
+    #register {
+        width: 90%; /* Lebar form register pada layar kecil */
+    }
+}

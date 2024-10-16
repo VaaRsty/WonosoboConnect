@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/register.css">
     <title>Register - Wonosobo Connect</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
     <main>
         <section id="register">
             <h2>Register</h2>
-            <form>
+            <form id="register-form">
                 <label for="name">Nama Lengkap:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -51,5 +51,7 @@
             </form>
         </section>
     </main>
+    <div id="toast" class="toast" style="display: none;"></div> 
+    <script src="js/script.js"></script>
 </body>
 </html>

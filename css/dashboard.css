@@ -1,0 +1,160 @@
+/* index.css */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #24C4B5;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Tambahkan ini agar hamburger dapat ditampilkan di atas header */
+}
+
+.logo {
+    text-align: left;
+}
+
+.wonosobo-connect {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.text-wonosobo {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.text-connect {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Flex untuk menu di layar besar */
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #112423;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #24C4B5;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    color: #24C4B5;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #f1f1f1;
+    color: #24C4B5;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #24C4B5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
