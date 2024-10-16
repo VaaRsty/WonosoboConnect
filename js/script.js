@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function handleLogin(event) {
     event.preventDefault();
-    showToast("Login Berhasil!");
-    document.querySelector('#login-form').reset(); // Reset form login
+    showToast("Login Berhasil!"); 
+    document.getElementById("login-form").reset();  
 }
 
 document.getElementById('register-form').addEventListener('submit', function(event) {

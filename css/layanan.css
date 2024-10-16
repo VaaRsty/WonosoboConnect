@@ -1,4 +1,3 @@
-/* index.css */
 body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
@@ -13,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Tambahkan ini agar hamburger dapat ditampilkan di atas header */
+    position: relative;
 }
 
 .logo {
@@ -48,7 +47,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex; /* Flex untuk menu di layar besar */
+    display: flex;
     align-items: center;
 }
 
@@ -130,30 +129,29 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responsif */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Susun menu dalam kolom */
-        display: none; /* Sembunyikan menu */
-        width: 100%; /* Lebar penuh */
-        background-color: #24C4B5; /* Warna latar belakang menu */
-        position: absolute; /* Agar menu mengambang */
-        top: 60px; /* Mengatur posisi di bawah header */
-        z-index: 1000; /* Memastikan menu di atas konten lain */
-        padding: 10px 0; /* Memberikan padding pada menu */
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #24C4B5;
+        position: absolute;
+        top: 60px;
+        z-index: 1000;
+        padding: 10px 0;
     }
 
     nav .hamburger {
-        display: block; /* Tampilkan hamburger */
+        display: block;
         cursor: pointer;
-        font-size: 24px; /* Ukuran ikon hamburger */
+        font-size: 24px;
     }
 
     nav ul.show {
-        display: flex; /* Tampilkan menu ketika class show ditambahkan */
+        display: flex;
     }
 
     nav ul li {
-        text-align: center; /* Rata tengah */
+        text-align: center;
     }
 }
