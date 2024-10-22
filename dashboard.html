@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
-    <title>Dashboard - Wonosobo Connect</title>
+    <title>Dashboard Admin - Wonosobo Connect</title>
 </head>
 <body>
     <header>
@@ -16,41 +16,77 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="layanan.html">Layanan</a></li>
-                <li><a href="berita.html">Berita</a></li>
-                <li><a href="tentang.html">Tentang Kami</a></li>
-                <li><a href="login.html">Login/Register</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="kelola-layanan.html">Kelola Layanan</a></li>
+                <li><a href="pengguna.html">Pengguna</a></li>
+                <li><a href="laporan.html">Laporan</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section id="dashboard">
-            <h2>Dashboard</h2>
+            <h2>Dashboard Admin</h2>
             <div class="dashboard-container">
                 <aside class="sidebar">
-                    <h3>Menu</h3>
+                    <h3>Menu Admin</h3>
                     <ul>
-                        <li><a href="#">Profil Saya</a></li>
-                        <li><a href="layanan.html">Layanan</a></li>
-                        <li><a href="#">Riwayat Transaksi</a></li>
-                        <li><a href="#">Pengaturan Akun</a></li>
+                        <li><a href="#">Statistik Pengguna</a></li>
+                        <li><a href="#">Riwayat Permohonan</a></li>
+                        <li><a href="#">Kelola Akun</a></li>
+                        <li><a href="#">Pengaturan Layanan</a></li>
                         <li><a href="#">Keluar</a></li>
                     </ul>
                 </aside>
 
                 <div class="dashboard-content">
-                    <h3>Selamat datang, [Nama Pengguna]!</h3>
-                    <p>Berikut adalah ringkasan informasi akun Anda:</p>
+                    <h3>Selamat datang, Admin!</h3>
+                    <p>Berikut adalah ringkasan statistik layanan:</p>
+                    
                     <div class="info-card">
-                        <h4>Jumlah Layanan yang Diajukan</h4>
-                        <p>5</p>
+                        <h4>Total Pengguna Terdaftar</h4>
+                        <p>150</p>
                     </div>
                     <div class="info-card">
-                        <h4>Status Permohonan Terbaru</h4>
-                        <p>Dalam Proses</p>
+                        <h4>Total Permohonan Layanan</h4>
+                        <p>80</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Total Layanan Aktif</h4>
+                        <p>10</p>
+                    </div>
+
+                    <div class="recent-transactions">
+                        <h4>Riwayat Permohonan Terbaru</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tanggal</th>
+                                    <th>Nama Pengguna</th>
+                                    <th>Deskripsi</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>20 Oktober 2024</td>
+                                    <td>[Nama Pengguna 1]</td>
+                                    <td>Permohonan Layanan A</td>
+                                    <td>Dalam Proses</td>
+                                </tr>
+                                <tr>
+                                    <td>19 Oktober 2024</td>
+                                    <td>[Nama Pengguna 2]</td>
+                                    <td>Permohonan Layanan B</td>
+                                    <td>Selesai</td>
+                                </tr>
+                                <tr>
+                                    <td>18 Oktober 2024</td>
+                                    <td>[Nama Pengguna 3]</td>
+                                    <td>Permohonan Layanan C</td>
+                                    <td>Ditolak</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
