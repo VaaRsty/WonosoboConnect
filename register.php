@@ -16,11 +16,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="layanan.html">Layanan</a></li>
-                <li><a href="berita.html">Berita</a></li>
-                <li><a href="tentang.html">Tentang Kami</a></li>
-                <li><a href="login.html">Login/Register</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="layanan.php">Layanan</a></li>
+                <li><a href="berita.php">Berita</a></li>
+                <li><a href="tentang.php">Tentang Kami</a></li>
+                <li><a href="login.php">Login/Register</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
     <main>
         <section id="register">
             <h2>Register</h2>
-            <form id="register-form">
+            <form id="register-form" onsubmit="handleRegister(event)">
                 <label for="name">Nama Lengkap:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -46,11 +46,11 @@
                 
                 <button type="submit">Daftar</button>
                 
-                <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+                <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
             </form>
         </section>
     </main>
-    <div id="toast" class="toast">Pesan Toast di sini</div>
+    <div id="toast" class="toast"></div>
     <script src="js/script.js"></script>
 </body>
 </html>

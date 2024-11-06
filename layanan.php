@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION['login_success'])) {
+    $login_message = $_SESSION['login_success'];
+    unset($_SESSION['login_success']);
+} else {
+    $login_message = "";
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,11 +26,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="layanan.html">Layanan</a></li>
-                <li><a href="berita.html">Berita</a></li>
-                <li><a href="tentang.html">Tentang Kami</a></li>
-                <li><a href="login.html">Login/Register</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="layanan.php">Layanan</a></li>
+                <li><a href="berita.php">Berita</a></li>
+                <li><a href="tentang.php">Tentang Kami</a></li>
+                <li><a href="login.php">Login/Register</a></li>
             </ul>
         </nav>
     </header>
@@ -28,41 +38,43 @@
     <main>
         <section id="services">
             <h2>Layanan Publik</h2>
-
+            <?php if ($login_message): ?>
+                <p style="color: black;"><?php echo $login_message; ?></p>
+            <?php endif; ?>
             <div class="service">
                 <h3>Pelayanan Administrasi Kependudukan</h3>
                 <p>Ajukan pembuatan KTP, KK, akta kelahiran, atau surat pindah secara online melalui layanan ini.</p>
-                <a href="layanan-administrasi.html" class="button">Selengkapnya</a>
+                <a href="layanan-administrasi.php" class="button">Selengkapnya</a>
             </div>
 
             <div class="service">
                 <h3>Pelayanan Kesehatan</h3>
                 <p>Dapatkan akses ke layanan kesehatan, termasuk pendaftaran online untuk pemeriksaan kesehatan dan vaksinasi.</p>
-                <a href="layanan-kesehatan.html" class="button">Selengkapnya</a>
+                <a href="layanan-kesehatan.php" class="button">Selengkapnya</a>
             </div>
 
             <div class="service">
                 <h3>Pelayanan Izin Usaha</h3>
                 <p>Daftarkan usaha Anda dengan mudah dan cepat. Dapatkan informasi mengenai syarat dan prosedur pendaftaran.</p>
-                <a href="layanan-izin.html" class="button">Selengkapnya</a>
+                <a href="layanan-izin.php" class="button">Selengkapnya</a>
             </div>
 
             <div class="service">
                 <h3>Informasi Pendidikan</h3>
                 <p>Temukan informasi mengenai sekolah, pendaftaran siswa baru, dan beasiswa yang tersedia di Kabupaten Wonosobo.</p>
-                <a href="layanan-pendidikan.html" class="button">Selengkapnya</a>
+                <a href="layanan-pendidikan.php" class="button">Selengkapnya</a>
             </div>
 
             <div class="service">
                 <h3>Pelayanan Lingkungan Hidup</h3>
                 <p>Lapor dan ajukan keluhan mengenai masalah lingkungan hidup melalui layanan ini. Kami siap membantu Anda.</p>
-                <a href="layanan-lingkungan.html" class="button">Selengkapnya</a>
+                <a href="layanan-lingkungan.php" class="button">Selengkapnya</a>
             </div>
 
             <div class="service">
                 <h3>Pelayanan Keamanan Publik</h3>
                 <p>Ajukan laporan kehilangan, pengaduan, atau permohonan informasi terkait keamanan dan ketertiban umum.</p>
-                <a href="layanan-keamanan.html" class="button">Selengkapnya</a>
+                <a href="layanan-keamanan.php" class="button">Selengkapnya</a>
             </div>
         </section>
     </main>

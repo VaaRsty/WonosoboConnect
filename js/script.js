@@ -15,7 +15,7 @@ function showToast(message) {
     setTimeout(() => {
         toast.classList.remove('show');
         toast.classList.remove('fade');
-    }, 3500);
+    }, 4000); 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,8 +41,8 @@ function handleLogin(event) {
     document.getElementById("login-form").reset();  
 }
 
-document.getElementById('register-form').addEventListener('submit', function(event) {
+function handleRegister(event) { 
     event.preventDefault();
     showToast("Registrasi berhasil!");
-    this.reset(); 
-});
+    document.getElementById("register-form").reset();
+}

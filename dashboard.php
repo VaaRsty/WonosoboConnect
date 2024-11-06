@@ -19,6 +19,7 @@
                 <li><a href="kelola-layanan.html">Kelola Layanan</a></li>
                 <li><a href="pengguna.html">Pengguna</a></li>
                 <li><a href="laporan.html">Laporan</a></li>
+                <li><a href="logout.php">Keluar</a></li> 
             </ul>
         </nav>
     </header>
@@ -34,7 +35,6 @@
                         <li><a href="#">Riwayat Permohonan</a></li>
                         <li><a href="#">Kelola Akun</a></li>
                         <li><a href="#">Pengaturan Layanan</a></li>
-                        <li><a href="#">Keluar</a></li>
                     </ul>
                 </aside>
 
