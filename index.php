@@ -21,11 +21,7 @@
                 <li><a href="layanan.php">Layanan</a></li>
                 <li><a href="berita.php">Berita</a></li>
                 <li><a href="tentang.php">Tentang Kami</a></li>
-                <?php if ($isLoggedIn): ?>
-                    <li><a href="logout.php">Logout</a></li>
-                <?php else: ?>
-                    <li><a href="login.php">Login/Register</a></li>
-                <?php endif; ?>
+                <li><a href="login.php">Login/Register</a></li>
             </ul>
         </nav>      
     </header>
@@ -33,11 +29,6 @@
     <main>
         <section id="home" class="welcome-section">
             <h1>Selamat datang di Wonosobo Connect</h1>
-            <?php if ($isLoggedIn): ?>
-                <p>Halo, <?php echo htmlspecialchars($_SESSION['username']); ?>! Terima kasih telah bergabung.</p>
-            <?php else: ?>
-                <p>Platform Terpadu untuk Informasi dan Layanan Kabupaten Wonosobo.</p>
-            <?php endif; ?>
         </section>
      
         <section id="services">
