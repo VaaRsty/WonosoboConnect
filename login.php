@@ -1,18 +1,39 @@
 <?php
 session_start();
+include 'koneksi.php'; 
 
-$error = "";
+if (isset($_POST['login'])) {
+    $requestUsername = $_POST['username'];
+    $requestPassword = $_POST['password'];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
-    $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
+    $stmt = $koneksi->prepare("SELECT id, username, password FROM tb_admin WHERE username = ?");
+    $stmt->bind_param("s", $requestUsername);
+    $stmt->execute();
+    $stmt->store_result();
 
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    $_SESSION['login_success'] = "Login berhasil! Selamat datang, $username.";
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($id, $username, $hashedPassword);
+        $stmt->fetch();
 
-    header("Location: layanan.php");
-    exit;
+        if (password_verify($requestPassword, $hashedPassword)) {
+            $_SESSION['username'] = $username;
+            $_SESSION['id'] = $id;
+            header('Location: dashboard.php');
+            exit();
+        } else {
+            echo "<script>
+                alert('Login gagal! Username atau password salah.');
+                window.location = 'login.php';
+            </script>";
+        }
+    } else {
+        echo "<script>
+            alert('Login gagal! Username atau password salah.');
+            window.location = 'login.php';
+        </script>";
+    }
+
+    $stmt->close();
 }
 ?>
 
@@ -22,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
-    <title>Login/Register - Wonosobo Connect</title>
+    <title>Login - Wonosobo Connect</title>
 </head>
 <body>
     <header>
@@ -35,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="layanan.php">Layanan</a></li>
+                <li><a href="layanan/layanan.php">Layanan</a></li>
                 <li><a href="berita.php">Berita</a></li>
                 <li><a href="tentang.php">Tentang Kami</a></li>
                 <li><a href="login.php">Login/Register</a></li>
@@ -45,24 +66,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <main>
         <section id="login">
-            <h2>Login/Register</h2>
-            <?php if ($error): ?>
-                <p style="color: red;"><?php echo $error; ?></p>
-            <?php endif; ?>
-            <form id="login-form" method="POST" action="login.php">
+            <h2>Login</h2>
+            <form method="POST" action="login.php">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
                 
-                <button type="submit">Login</button>
+                <button type="submit" name="login">Login</button>
                 
-                <p>Belum punya akun? <a href="register.php">Register</a></p> 
+                <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
             </form>
         </section>
     </main>
-    <div id="toast" class="toast"></div>
     <script src="js/script.js"></script>
 </body>
 </html>

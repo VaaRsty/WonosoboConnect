@@ -17,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="layanan.php">Layanan</a></li>
+                <li><a href="layanan/layanan.php">Layanan</a></li>
                 <li><a href="berita.php">Berita</a></li>
                 <li><a href="tentang.php">Tentang Kami</a></li>
                 <li><a href="login.php">Login/Register</a></li>

@@ -1,20 +1,9 @@
-<?php
-session_start();
-
-if (isset($_SESSION['login_success'])) {
-    $login_message = $_SESSION['login_success'];
-    unset($_SESSION['login_success']);
-} else {
-    $login_message = "";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/layanan.css">
+    <link rel="stylesheet" href="../css/layanan.css">
     <title>Layanan - Wonosobo Connect</title>
 </head>
 <body>
@@ -23,15 +12,15 @@ if (isset($_SESSION['login_success'])) {
             <p class="wonosobo-connect">
                 <span class="text-wonosobo">Wonosobo</span><br />
                 <span class="text-connect">Connect</span>
-            </p>   
+            </p>
         </div>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="layanan.php">Layanan</a></li>
-                <li><a href="berita.php">Berita</a></li>
-                <li><a href="tentang.php">Tentang Kami</a></li>
-                <li><a href="login.php">Login/Register</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../layanan.php">Layanan</a></li>
+                <li><a href="../berita.php">Berita</a></li>
+                <li><a href="../tentang.php">Tentang Kami</a></li>
+                <li><a href="../login.php">Login/Register</a></li>
             </ul>
         </nav>
     </header>
@@ -39,9 +28,6 @@ if (isset($_SESSION['login_success'])) {
     <main>
         <section id="services">
             <h2>Layanan Publik</h2>
-            <?php if ($login_message): ?>
-                <p style="color: black;"><?php echo $login_message; ?></p>
-            <?php endif; ?>
             <div class="service">
                 <h3>Pelayanan Administrasi Kependudukan</h3>
                 <p>Ajukan pembuatan KTP, KK, akta kelahiran, atau surat pindah secara online melalui layanan ini.</p>
@@ -79,11 +65,13 @@ if (isset($_SESSION['login_success'])) {
             </div>
         </section>
     </main>
-    <script src="js/script.js"></script>
+
     <footer>
         <p>© 2024 Wonosobo Connect. Semua Hak Cipta Dilindungi.</p>
         <p>Kebijakan Privasi | Syarat dan Ketentuan</p>
         <p>Kontak Kami: info@wonosoboconnect.go.id</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
